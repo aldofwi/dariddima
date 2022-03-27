@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/code_style-standardjs-cccc44.svg" alt="code style: standardjs">
 </a>
 
-[![Doc](https://img.shields.io/badge/App-Barbuzar-green)](http://aldofwi.github.io/barbuzar)
+[![Doc](https://img.shields.io/badge/App-DaRiddima-green)](http://aldofwi.github.io/dariddima)
 
 
 ## Description
