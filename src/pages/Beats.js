@@ -1,26 +1,62 @@
 import React from 'react'
-import "../components/styles.css";
-import YoutubeEmbed from "../components/YoutubeEmbed";
+import "../components/styles.css"
 
 function Beats() {
 
     return (
         <html>
-        <head>
-            <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Beats</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossOrigin="anonymous" />
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-        </head>
+            <head>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Beats</title>
+                <link rel="stylesheet" href="../components/style.css" />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+            </head>
 
-        <div className='title'>Beats</div>
+            <div class="bodypl">
+            <div className="wrapper">
+                <div className="top-bar">
 
-        <div className="Youtube">
-            <YoutubeEmbed embedId="sh68ApmE3zs" />
-        </div>
+                    <i className="material-icons">expand_more</i>
+                    <span>Now Playing</span>
+                    <i className="material-icons">more_horiz</i>
 
-    </html>
+                    <div class="img-area">
+                        <img src="#" alt="" />
+                    </div>
+
+                    <div class="song-details">
+                        <p class="name">BARRIO Instrumental</p>
+                    </div>
+
+                    <div class="progress-area">
+                        <div class="progress-bar">
+                            <span></span>
+                        </div>
+                        <div class="timer">
+                            <span class="current">0:20</span>
+                            <span class="current">3:40</span>
+                        </div>
+                    </div>
+                    <div class="controls">
+
+                        <i id="repeat-plist" className="material-icons">repeat</i>
+                        <i id="prev" className="material-icons">skip_previous</i>
+                        
+                        <div class="play-pause">
+                            <i className="material-icons">play_arrow</i>
+                        </div>
+
+                        <i id="next" className="material-icons">skip_next</i>
+                        <i id="more-music" className="material-icons">queue_music</i>
+
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+        </html>
     )
 }
 
