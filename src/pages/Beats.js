@@ -21,7 +21,7 @@ function Beats() {
                     <i className="material-icons">more_horiz</i>
                 </div>
                 
-                <div class="img-area">
+                <div className="img-area">
                     <img src="../images/barrio.png" alt="" />
                 </div>
 
