@@ -16,43 +16,42 @@ function Beats() {
             <div class="bodypl">
             <div className="wrapper">
                 <div className="top-bar">
-
                     <i className="material-icons">expand_more</i>
                     <span>Now Playing</span>
                     <i className="material-icons">more_horiz</i>
+                </div>
+                
+                <div class="img-area">
+                    <img src="../images/barrio.png" alt="" />
+                </div>
 
-                    <div class="img-area">
-                        <img src="#" alt="" />
+                <div class="song-details">
+                    <p class="name">BARRIO Instrumental</p>
+                </div>
+
+                <div class="progress-area">
+                    <div class="progress-bar">
+                        <span></span>
+                    </div>
+                    <div class="timer">
+                        <span class="current">0:20</span>
+                        <span class="current">3:40</span>
+                    </div>
+                </div>
+                <div class="controls">
+
+                    <i id="repeat-plist" className="material-icons">repeat</i>
+                    <i id="prev" className="material-icons">skip_previous</i>
+                    
+                    <div class="play-pause">
+                        <i className="material-icons">play_arrow</i>
                     </div>
 
-                    <div class="song-details">
-                        <p class="name">BARRIO Instrumental</p>
-                    </div>
-
-                    <div class="progress-area">
-                        <div class="progress-bar">
-                            <span></span>
-                        </div>
-                        <div class="timer">
-                            <span class="current">0:20</span>
-                            <span class="current">3:40</span>
-                        </div>
-                    </div>
-                    <div class="controls">
-
-                        <i id="repeat-plist" className="material-icons">repeat</i>
-                        <i id="prev" className="material-icons">skip_previous</i>
-                        
-                        <div class="play-pause">
-                            <i className="material-icons">play_arrow</i>
-                        </div>
-
-                        <i id="next" className="material-icons">skip_next</i>
-                        <i id="more-music" className="material-icons">queue_music</i>
-
-                    </div>
+                    <i id="next" className="material-icons">skip_next</i>
+                    <i id="more-music" className="material-icons">queue_music</i>
 
                 </div>
+
             </div>
             </div>
 

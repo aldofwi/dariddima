@@ -20,8 +20,8 @@ function Pricing() {
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
             <div className='title'>Pricing</div>
                 <p>---</p>
-                <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this Bootstrap example.</p>
-                <p class="fs-5 text-muted">It’s built with default Bootstrap components and utilities with little customization.</p>
+                <p class="fs-5 text-muted">All songs including our production must be credited as "Produced by DaRiddima".</p>
+                <p class="fs-5 text-muted">Perfect for indie artists working on different type of projects.</p>
             </div>
 
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -31,12 +31,12 @@ function Pricing() {
                         <h4 class="my-0 fw-normal">Standard</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">50<small class="text-muted fw-light"> €</small></h1>
+                        <h1 class="card-title pricing-card-title">100<small class="text-muted fw-light"> €</small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                        <li>10 users included</li>
-                        <li>2 GB of storage</li>
-                        <li>Email support</li>
-                        <li>Help center access</li>
+                        <li>Untagged MP3</li>
+                        <li>PDF Contract</li>
+                        <li>Instant Download</li>
+                        <li>Non-Exclusive Rights</li>
                         </ul>
                         <button type="button" class="w-100 btn btn-lg btn-outline-primary">Get Standard</button>
                     </div>
@@ -51,10 +51,10 @@ function Pricing() {
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">250<small class="text-muted fw-light"> €</small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                        <li>20 users included</li>
-                        <li>10 GB of storage</li>
-                        <li>Priority email support</li>
-                        <li>Help center access</li>
+                        <li>Untagged WAV & MP3</li>
+                        <li>PDF Contract</li>
+                        <li>Instant Download</li>
+                        <li>Synchronization Rights</li>
                         </ul>
                         <button type="button" class="w-100 btn btn-lg btn-primary">Get Premium</button>
                     </div>
@@ -69,10 +69,10 @@ function Pricing() {
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">500<small class="text-muted fw-light"> €</small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                        <li>30 users included</li>
-                        <li>15 GB of storage</li>
-                        <li>Phone and email support</li>
-                        <li>Help center access</li>
+                        <li>Untagged WAV & MP3</li>
+                        <li>PDF Contract</li>
+                        <li>Royalty Free Sales</li>
+                        <li>Synchronization Rights</li>
                         </ul>
                         <button type="button" class="w-100 btn btn-lg btn-outline-secondary">Get Pro</button>
                     </div>
