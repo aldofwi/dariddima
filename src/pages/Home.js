@@ -4,7 +4,11 @@ function Home() {
 
     return (
 
-            <div id="backhome"></div>
+        <div id="backhome">
+        
+        </div>
+
+        
 
     )
 }

@@ -11,39 +11,42 @@ function Beats() {
                 <title>Beats</title>
                 <link rel="stylesheet" href="../components/style.css" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-            </head>
+            </head>          
 
-            <div class="bodypl">
+        <div className="bodypl">
             <div className="wrapper">
+
                 <div className="top-bar">
                     <i className="material-icons">expand_more</i>
                     <span>Now Playing</span>
                     <i className="material-icons">more_horiz</i>
                 </div>
                 
-                <div className="img-area">
-                    <img src="../images/barrio.png" alt="" />
+                <div className="img-area">                   
+                    <img src="" alt="" />
                 </div>
 
-                <div class="song-details">
-                    <p class="name">BARRIO Instrumental</p>
+                <div className="song-details">
+                    <p className="name"></p>
                 </div>
 
-                <div class="progress-area">
-                    <div class="progress-bar">
+                <div className="progress-area">
+                    <div className="progress-bar">
                         <span></span>
                     </div>
-                    <div class="timer">
-                        <span class="current">0:20</span>
-                        <span class="current">3:40</span>
+
+                    <div className="timer">
+                        <span className="current">0:20</span>
+                        <span className="current">3:40</span>
                     </div>
                 </div>
-                <div class="controls">
+
+                <div className="controls">
 
                     <i id="repeat-plist" className="material-icons">repeat</i>
                     <i id="prev" className="material-icons">skip_previous</i>
                     
-                    <div class="play-pause">
+                    <div className="play-pause">
                         <i className="material-icons">play_arrow</i>
                     </div>
 
@@ -52,8 +55,72 @@ function Beats() {
 
                 </div>
 
+                <div className="music-list">
+                    <div className="header">
+                        <div className="row">
+                            <i className="material-icons">queue_music</i>
+                            <span>Music List</span>
+                        </div>
+                        <i id="close" className="material-icons">close</i>
+                    </div>
+                    <ul>
+                        <li>
+                            <div className="row">
+                                <span>Firebird Instrumental</span>
+                            </div>
+                            <span className="audio-duration">3:40</span>
+                        </li>
+                        <li>
+                            <div className="row">
+                                <span>Firebird Instrumental</span>
+                            </div>
+                            <span className="audio-duration">3:40</span>
+                        </li>
+                        <li>
+                            <div className="row">
+                                <span>Firebird Instrumental</span>
+                            </div>
+                            <span className="audio-duration">3:40</span>
+                        </li>
+                        <li>
+                            <div className="row">
+                                <span>Firebird Instrumental</span>
+                            </div>
+                            <span className="audio-duration">3:40</span>
+                        </li>
+                        <li>
+                            <div className="row">
+                                <span>Firebird Instrumental</span>
+                            </div>
+                            <span className="audio-duration">3:40</span>
+                        </li>
+                        <li>
+                            <div className="row">
+                                <span>Firebird Instrumental</span>
+                            </div>
+                            <span className="audio-duration">3:40</span>
+                        </li>
+                        <li>
+                            <div className="row">
+                                <span>Firebird Instrumental</span>
+                            </div>
+                            <span className="audio-duration">3:40</span>
+                        </li>
+                        <li>
+                            <div className="row">
+                                <span>Firebird Instrumental</span>
+                            </div>
+                            <span className="audio-duration">3:40</span>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-            </div>
+
+            <script src="music-list.js"></script>
+            <script src="script.js"></script>
+
+        </div>
 
         </html>
     )
