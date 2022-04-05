@@ -5,22 +5,11 @@ code {
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body {
-  /* background-image: linear-gradient(rgba(0,0,0,0.3 ), transparent), url(./images/NHCT1.png); */
-  /* background-image: linear-gradient(rgba(0,0,0,0.3 ), transparent); */
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  background-color: black;
+  background-color: black;  
 }
 
-#backhome {
-  background-image: url("./images/NHCT1.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-  background-color: darkorange;
+.backhome {
+  background-image: url("./images/pic-1.png");
 }
 
 .title {
@@ -38,7 +27,7 @@ body {
   display: flex; 
   color: whitesmoke;
   padding-right: 10vh;
-  padding-bottom: 3vh;
+  padding-bottom: 30vh;
   background-color: black;
   font-family: CGF Locust Resistance;
   font-size: 2rem;
@@ -56,7 +45,7 @@ body {
 .beats h3,
 .about {
   display: block;
-  height: 0vh;
+  height: 0vh;  
   align-items: center;
   justify-content: center;
   font-size: 1rem;

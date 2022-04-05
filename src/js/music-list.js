@@ -1,34 +1,34 @@
-
-// eslint-disable-next-line no-unused-vars
 let allInstrumentals = [
     {
         name: "Firebird Instrumental",
-        img: "firebird",
+        img: "pic-1",
         src: "firebird"
     },
     {
         name: "Hard Brain Instrumental",
-        img: "hardbrain",
+        img: "pic-2",
         src: "hardbrain"
     },
     {
-        name: "Pyrolise Instrumental",
-        img: "pyrolise",
-        src: "pyrolise"
+        name: "Nomad Instrumental",
+        img: "pic-3",
+        src: "nomad"
     },
     {
         name: "TastyToo Instrumental",
-        img: "tastytoo",
+        img: "pic-4",
         src: "tastytoo"
     },
     {
         name: "Awoo Instrumental",
-        img: "awoo",
+        img: "pic-5",
         src: "awoo"
     },
     {
-        name: "Nomad Instrumental",
-        img: "nomad",
-        src: "nomad"
-    },
+        name: "Pyrolise Instrumental",
+        img: "pic-6",
+        src: "pyrolise"
+    }
 ];
+
+export default allInstrumentals;
