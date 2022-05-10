@@ -16,6 +16,7 @@ function Navbar() {
     return (
 
         <IconContext.Provider value={{color: 'burlywood'}}>
+        
             <div className="navbar">
         
                 <Link to="#" className="menu-bars">

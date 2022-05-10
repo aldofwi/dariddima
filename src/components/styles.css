@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif ;
+  font-family: "Poppins", sans-serif ;  
 }
 *::before, *::after{
   padding: 0;
@@ -21,9 +22,10 @@
 
 .bodypl {
   display: flex;
+  /* background-color: white; */
   align-items: center;
   justify-content: center;
-  min-height: 88vh;
+  min-height: 18vh;
 }
 
 .wrapper {
@@ -32,6 +34,7 @@
   width: 380px;
   border-radius: 15px;
   padding: 25px 30px;
+  left: 1%;
   background: var(--darkwhite);
   box-shadow: 0px 6px 15px var(--lightbshadow);
 }

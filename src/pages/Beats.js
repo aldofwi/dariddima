@@ -1,17 +1,14 @@
 import React from 'react'
-import "../js/script"
-import "../components/styles.css"
-
-// import allInstrumentals from "../js/music-list"
+import AudioPlayer from '../components/AudioPlayer'
 
 function Beats() {
 
     return (
 
         <div className="backhome">
-        
-            <div className="title">Home</div>
 
+            <AudioPlayer />
+            
         </div>
     )
 }
