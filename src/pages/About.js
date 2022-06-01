@@ -14,6 +14,10 @@ function About() {
         <div className='about'>
             <p className="alinea"></p>
 
+            <p className="alinea"></p>
+            <p className="alinea"></p>
+            <p className="alinea"></p>
+
                 <figure className="text">
                     <blockquote>
                         <p className="mb-3"><i>DaRiddima is an authentic Beatmaker, </i></p>
@@ -23,22 +27,6 @@ function About() {
                     <figcaption>
                         <p className="alinea">—<cite title="Source Title">The Source</cite></p>
                     </figcaption>
-                </figure>
-
-                <p className="alinea"></p>
-                <p className="alinea"></p>
-                <p className="alinea"></p>
-
-                <figure className="text">
-                    <blockquote>
-                        <p className="mb-3"><i>DaRiddima est un authentique Beatmaker,</i></p>
-                        <p className="mb-3"><i>Entre Riddims & Urban Beats, il a forcément ce que tu recherches. </i></p>
-                        <p className="mb-3"><i>Disponible pour toutes vos propositions, tout type de style musical.</i></p>
-                    </blockquote>
-                    <figcaption>
-                        <p className="alinea">—<cite title="Source Title">La Source</cite></p>
-                    </figcaption>
-
                 </figure>
 
         </div>

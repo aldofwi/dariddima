@@ -64,11 +64,13 @@
   
   .playlist {
     position: relative;
-    background: #e3e3e3;
+    background: black;
     margin-top: -10px;
+    /* background: #e3e3e3; 
     border-radius: 5px;
     border-width: 5px;
     border-style: double;
+    border-color: burlywood;*/
     top: -10px;
   }
   
@@ -76,6 +78,8 @@
     /* background: white; */
     font-weight: bolder;
     font-size: large;
+    color: burlywood;
+    font-family: CGF Locust Resistance;
   }
   
   .playlist .header {
@@ -89,6 +93,7 @@
   .songContainer {
     cursor: pointer;
     user-select: none;
+    left: 5%;
   }
   
   .pltext {
@@ -101,31 +106,33 @@
     display: block;
     flex-direction: column;
     flex: 1 1;
-    width: 61vw;
+    width: 65vw;
   }
   
  .picture {
-   width: 60%;
+   width: 70%;
    height: 80%;
    display: flex;
    position: absolute;
    border-radius: 10px;
-   border-style: solid;
+   border-style: double;
+   border-color: burlywood;
    border-width: 5px;
-   left: 38%;
+   left: 28%;
    top: 10%;
  }
 
   .loi li {
     font-weight: 450;
     display: flex;
+    color: #fff;
     flex-direction: row;
     align-items: center;
   }
 
   .tmbn_song {
-    height: 65px;
-    width: 65px;
+    height: 60px;
+    width: 60px;
     /* background: url("../src/images/pic-3.png"); */
     background-size: contain;
     color: white;
@@ -139,8 +146,8 @@
     height: 271px;
   }
   
-  .song {
-    padding: 10px;
+  .songtitle {
+    padding: 11px;
   }
 
   .songmeta_playlist {

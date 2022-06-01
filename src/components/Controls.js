@@ -106,7 +106,7 @@ let Controls = () => {
         <div className="progressb">
             <div className="songMeta">
                 <span className="songtitle">
-                    {songslist[currentSong].name}
+                    {songslist[currentSong].name} Instrumental
                 </span>
             </div>
             <progress
