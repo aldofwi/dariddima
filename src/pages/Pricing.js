@@ -1,21 +1,32 @@
-import React from 'react' ;
+import React, { useState } from 'react' ;
+import "../App.css"
+
+import StripeContainer from '../components/StripeContainer';
 
 function Pricing() {
+
+    const [showItem, setShowItem] = useState(false);
 
     return (
         <div>
 
             <title>Pricing</title>
+
+            <div className='pricing'>
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+                <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <div className='title'>Pricing</div>
+                    <p className="fs-5 text-muted">All songs including our production must be credited as "Produced by DaRiddima".</p>
+                    <p className="fs-5 text-muted">Perfect for indie artists working on different type of projects.</p>
+                </div>
+
+            </div>
+
+        { showItem ? <StripeContainer /> : 
             
         <div className='pricing'>
-
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-            <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <div className='title'>Pricing</div>
-                <p className="fs-5 text-muted">All songs including our production must be credited as "Produced by DaRiddima".</p>
-                <p className="fs-5 text-muted">Perfect for indie artists working on different type of projects.</p>
-            </div>
 
             <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div className="col">
@@ -31,7 +42,7 @@ function Pricing() {
                         <li>Instant Download</li>
                         <li>Non-Exclusive Rights</li>
                         </ul>
-                        <button type="button" className="w-100 btn btn-lg btn-outline-primary">Get Standard</button>
+                        <button type="button" className="w-100 btn btn-lg btn-outline-primary" onClick={() => setShowItem(true)}>Get Standard</button>
                     </div>
                     </div>
                 </div>
@@ -49,7 +60,7 @@ function Pricing() {
                         <li>Instant Download</li>
                         <li>Synchronization Rights</li>
                         </ul>
-                        <button type="button" className="w-100 btn btn-lg btn-primary">Get Premium</button>
+                        <button type="button" className="w-100 btn btn-lg btn-primary" onClick={() => setShowItem(true)}>Get Premium</button>
                     </div>
                     </div>
                 </div>
@@ -67,7 +78,7 @@ function Pricing() {
                         <li>Royalty Free Sales</li>
                         <li>Synchronization Rights</li>
                         </ul>
-                        <button type="button" className="w-100 btn btn-lg btn-outline-secondary">Get Pro</button>
+                        <button type="button" className="w-100 btn btn-lg btn-outline-secondary" onClick={() => setShowItem(true)}>Get Pro</button>
                     </div>
                     </div>
                 </div>
@@ -75,6 +86,8 @@ function Pricing() {
             </div>
 
         </div>
+
+        }
 
     </div>
     )

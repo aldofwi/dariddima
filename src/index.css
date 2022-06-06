@@ -285,10 +285,11 @@ body {
 }
 
 Form {
-  position: absolute;
-  top: 45%;
-  left: 18%;
+  position: relative;
   display: block;
+  width: 65%;
+  top: 15%;
+  left: 18%;
 }
 
 Form.Item {
