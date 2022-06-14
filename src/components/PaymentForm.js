@@ -41,8 +41,8 @@ function PaymentForm() {
 
             try {
                 const {id} = paymentMethod
-                const response = await axios.post("http://localhost:3000/payment", {
-                    amount: 15000,
+                const response = await axios.post("http://localhost:4000/payment", {
+                    amount: 50000,
                     id
                 })
 
@@ -52,7 +52,7 @@ function PaymentForm() {
                 }
 
             } catch (error) {
-                console.log("Error : ", error)
+                console.log("Error : ", error.response)
             }
 
         } else {

@@ -8,7 +8,6 @@ import Pricing  from './pages/Pricing';
 import About    from './pages/About';
 import Contact  from './pages/Contact';
 
-
 function Dariddima() {
 
   return (
