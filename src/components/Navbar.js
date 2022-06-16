@@ -5,7 +5,7 @@ import * as RiIcons from 'react-icons/ri'
 import { SidebarData } from './SidebarData'
 import { IconContext } from 'react-icons'   
 
-import './Navbar.css'
+import '../styles/Navbar.css'
 
 function Navbar() {
 

@@ -13,6 +13,10 @@ function Contact() {
 
         <div className='title'>Follow DR</div>
 
+        <div class="contact-image">
+            <img src={require("../images/joka.png")} alt="Joka" /> 
+        </div>
+
         <div className='contact'>
             
             <div className="social-menu"> 
@@ -22,10 +26,13 @@ function Contact() {
                     <a href="https://www.youtube.com/c/dariddimamusic" target="_blank" rel="noreferrer"><i className="fa fa-youtube"></i></a>
                     <a href="https://twitter.com/NH_Carter" target="_blank" rel="noreferrer"><i className="fa fa-twitter"></i></a>
                     <a href="mailto:dariddima@gmail.com" target="_blank" rel="noreferrer"><i className="fa fa-envelope"></i></a>
-                </ul>            
+                </ul>  
+                         
             </div>
-
         </div>
+
+        
+       
     </html>
     )
 }

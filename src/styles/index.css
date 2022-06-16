@@ -26,7 +26,7 @@ body {
   font-family: CGF Locust Resistance;
   color: transparent;
   -webkit-text-stroke: 1px #fff;
-  background: url(images/back.png);
+  background: url(../images/back.png);
   background-clip: text;
   -webkit-background-clip: text;
   background-position: 0 0;
@@ -149,6 +149,24 @@ body {
   background-color: black;
 }
 
+.about-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: 3%;
+  margin-top: -14%;
+  width: 80%;
+  opacity: 0.5;
+}
+
+.contact-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: 3%;
+  margin-top: -11%;
+  width: 80%;
+  opacity: 0.5;
+}
+
 .payment {
   display: block;
   align-items: center;
@@ -189,7 +207,7 @@ body {
 .social-menu ul {
   position: absolute;
   top: 30%;
-  left: 33%;
+  left: 31.5%;
   transform: translate(-50%, -50%);
   display: flex;
 }
@@ -287,9 +305,9 @@ body {
 Form {
   position: relative;
   display: block;
-  width: 65%;
+  width: 58%;
   top: 15%;
-  left: 18%;
+  left: 17%;
 }
 
 Form.Item {

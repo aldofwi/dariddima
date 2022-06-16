@@ -1,7 +1,7 @@
 import React from 'react'
 
-import "../main.css"
-import "../input.css"
+import "../styles/main.css"
+import "../styles/input.css"
 import Controls from './Controls'
 import Playlist from './Playlist'
 import PlayerState from './PlayerState'

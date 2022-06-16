@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from "axios"
 
+// import "../styles/input.css"
+
 const CARD_OPTIONS = {
     iconStyle: "solid",
     style: {
@@ -23,18 +25,56 @@ const CARD_OPTIONS = {
     }
 }
 
+const Field = ({
+    label,
+    id,
+    type,
+    placeholder,
+    required,
+    autoComplete,
+    value,
+    onChange,
+  }) => (
+    <div className="FormRow">
+      <label htmlFor={id} className="FormRowLabel">
+        {label}
+      </label>
+      <input
+        className="FormRowInput"
+        id={id}
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        autoComplete={autoComplete}
+        value={value}
+        onChange={onChange}
+      />
+    </div>
+  );
+
 function PaymentForm() {
 
+    const [email, setEmail] = useState("")
+    const [phone, setPhone] = useState("")
+    const [name, setName]   = useState("")
+
     const [success, setSuccess] = useState(false)
+
     const stripe = useStripe()
     const elements = useElements()
 
     const handleSubmit = async (e) => {
 
         e.preventDefault()
+
         const {error, paymentMethod} = await stripe.createPaymentMethod({
             type: "card",
-            card: elements.getElement(CardElement)
+            card: elements.getElement(CardElement),
+            billing_details: {
+                email,
+                phone,
+                name
+            },
         })
 
         if(!error) {
@@ -65,18 +105,57 @@ function PaymentForm() {
         <>
         
         {!success ?
+
+        <div className='pricing'>
         
-        <form onSubmit={handleSubmit}>
+        <form className="Form" onSubmit={handleSubmit}>
+
             <fieldset className="FormGroup">
+
+                <Field
+                    label="Name"
+                    id="name"
+                    type="text"
+                    placeholder="Jane Doe"
+                    required
+                    autoComplete="name"
+                    value={name}
+                    onChange={(event) => { setName(event.target.value) }}
+                />
+
+                <Field
+                    label="Email"
+                    id="email"
+                    type="email"
+                    placeholder="janedoe@gmail.com"
+                    required
+                    autoComplete="email"
+                    value={email}
+                    onChange={(event) => { setEmail(event.target.value) }}
+                />
+
+                <Field
+                    label="Phone"
+                    id="phone"
+                    type="tel"
+                    placeholder="(941) 555-0123"
+                    autoComplete="tel"
+                    value={phone}
+                    onChange={(event) => { setPhone(event.target.value) }}
+                />
+
                 <div className="FormRow">
                     <CardElement options={CARD_OPTIONS} />
                 </div>
+
             </fieldset>
+
             <button>Pay</button>
         </form>
+        </div>
             :
-        <div>
-            <h2>You just bought a sweet Riddim !</h2>
+        <div className='pricing'>
+            <p className='mb-3'><h2>You just bought a sweet Riddim !</h2></p>
         </div>
         }
 

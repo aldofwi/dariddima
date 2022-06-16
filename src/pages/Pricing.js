@@ -1,5 +1,5 @@
 import React, { useState } from 'react' ;
-import "../App.css"
+import "../styles/App.css"
 
 import StripeContainer from '../components/StripeContainer';
 
@@ -12,21 +12,20 @@ function Pricing() {
 
             <title>Pricing</title>
 
-            <div className='pricing'>
-
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-                <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
-                <div className='title'>Pricing</div>
-                    <p className="fs-5 text-muted">All songs including our production must be credited as "Produced by DaRiddima".</p>
-                    <p className="fs-5 text-muted">Perfect for indie artists working on different type of projects.</p>
+                <div className='pricing'>
+                    <div className='title'>Pricing</div>
                 </div>
-
-            </div>
 
         { showItem ? <StripeContainer /> : 
             
         <div className='pricing'>
+
+            <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <p className="fs-5 text-muted">All songs including our production must be credited as "Produced by DaRiddima".</p>
+                <p className="fs-5 text-muted">Perfect for indie artists working on different type of projects.</p>
+            </div>
 
             <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div className="col">

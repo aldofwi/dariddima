@@ -28,8 +28,12 @@ function About() {
                         <p className="alinea">—<cite title="Source Title">The Source</cite></p>
                     </figcaption>
                 </figure>
-
         </div>
+
+        <div class="about-image">
+            <img src={require("../images/bnh.png")} alt="Joka" /> 
+        </div>
+       
     </div>
     )
 }
