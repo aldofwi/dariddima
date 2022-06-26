@@ -5,7 +5,9 @@ import StripeContainer from '../components/StripeContainer';
 
 function Pricing() {
 
-    const [showItem, setShowItem] = useState(false);
+    const [showItem,    setShowItem]   = useState(false);
+    const [price,       setPrice]      = useState(0);  
+    const [pack,        setPack]       = useState("");  
 
     return (
         <div>
@@ -15,10 +17,10 @@ function Pricing() {
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
                 <div className='pricing'>
-                    <div className='title'>Pricing</div>
+                    <div className='title_pricing'>Pricing</div>
                 </div>
 
-        { showItem ? <StripeContainer /> : 
+        { showItem ? <StripeContainer value={price} package={pack} /> : 
             
         <div className='pricing'>
 
@@ -34,14 +36,20 @@ function Pricing() {
                         <h4 className="my-0 fw-normal">Standard</h4>
                     </div>
                     <div className="card-body">
-                        <h1 className="card-title pricing-card-title">150<small className="text-muted fw-light"> €</small></h1>
+                        <h1 className="card-title pricing-card-title">{process.env.REACT_APP_STANDARD_PRICE}<small className="text-muted fw-light"> €</small></h1>
                         <ul className="list-unstyled mt-3 mb-4">
                         <li>Untagged MP3</li>
                         <li>PDF Contract</li>
                         <li>Instant Download</li>
                         <li>Non-Exclusive Rights</li>
                         </ul>
-                        <button type="button" className="w-100 btn btn-lg btn-outline-primary" onClick={() => setShowItem(true)}>Get Standard</button>
+                        <button 
+                            type="button" 
+                            className="w-100 btn btn-lg btn-outline-primary" 
+                            onClick={() => {    setShowItem(true);
+                                                setPrice(process.env.REACT_APP_STANDARD_PRICE);
+                                                setPack(process.env.REACT_APP_STANDARD_PACK);
+                                    }}>Get Standard</button>
                     </div>
                     </div>
                 </div>
@@ -52,14 +60,20 @@ function Pricing() {
                         <h4 className="my-0 fw-normal">Premium</h4>
                     </div>
                     <div className="card-body">
-                        <h1 className="card-title pricing-card-title">300<small className="text-muted fw-light"> €</small></h1>
+                        <h1 className="card-title pricing-card-title">{process.env.REACT_APP_PREMIUM_PRICE}<small className="text-muted fw-light"> €</small></h1>
                         <ul className="list-unstyled mt-3 mb-4">
                         <li>Untagged WAV & MP3</li>
                         <li>PDF Contract</li>
                         <li>Instant Download</li>
                         <li>Synchronization Rights</li>
                         </ul>
-                        <button type="button" className="w-100 btn btn-lg btn-primary" onClick={() => setShowItem(true)}>Get Premium</button>
+                        <button 
+                            type="button" 
+                            className="w-100 btn btn-lg btn-primary" 
+                            onClick={() => {    setShowItem(true);
+                                                setPrice(process.env.REACT_APP_PREMIUM_PRICE);
+                                                setPack(process.env.REACT_APP_PREMIUM_PACK);
+                                }}>Get Premium</button>
                     </div>
                     </div>
                 </div>
@@ -70,14 +84,20 @@ function Pricing() {
                         <h4 className="my-0 fw-normal">Pro</h4>
                     </div>
                     <div className="card-body">
-                        <h1 className="card-title pricing-card-title">500<small className="text-muted fw-light"> €</small></h1>
+                        <h1 className="card-title pricing-card-title">{process.env.REACT_APP_PRO_PRICE}<small className="text-muted fw-light"> €</small></h1>
                         <ul className="list-unstyled mt-3 mb-4">
                         <li>Untagged WAV & MP3</li>
                         <li>PDF Contract</li>
                         <li>Royalty Free Sales</li>
                         <li>Synchronization Rights</li>
                         </ul>
-                        <button type="button" className="w-100 btn btn-lg btn-outline-secondary" onClick={() => setShowItem(true)}>Get Pro</button>
+                        <button 
+                            type="button" 
+                            className="w-100 btn btn-lg btn-outline-secondary" 
+                            onClick={() => {    setShowItem(true);
+                                                setPrice(process.env.REACT_APP_PRO_PRICE);
+                                                setPack(process.env.REACT_APP_PRO_PACK);
+                                }}>Get Pro</button>
                     </div>
                     </div>
                 </div>

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from "axios"
-
-// import "../styles/input.css"
+import "../styles/input.css"
 
 const CARD_OPTIONS = {
     iconStyle: "solid",
@@ -24,6 +23,18 @@ const CARD_OPTIONS = {
 
     }
 }
+
+const Intel = ({
+    label1,
+    label2,
+    id,
+  }) => (
+    <div className="FormRow">
+      <label htmlFor={id} className="FormRowDisabled">
+        {label1+" "+label2}
+      </label>
+    </div>
+  );
 
 const Field = ({
     label,
@@ -52,11 +63,54 @@ const Field = ({
     </div>
   );
 
-function PaymentForm() {
+  const Listing = ({
+    label,
+    label1,
+    label2,
+    id,
+    id2,
+    type,
+    placeholder,
+    required,
+    autoComplete,
+    value,
+    onChange,
+  }) => (
+    <div className="FormRow">
+      <label htmlFor={id} className="FormRowLabel">
+        {label}
+      </label>
+      <select
+        className="FormRowSelect"
+        id={id}
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        autoComplete={autoComplete}
+        value={value}
+        onChange={onChange}
+      >
+        <option hidden>Choose a product</option>
+        <option>Barrio</option>
+        <option>HardBrain</option>
+        <option>Nomad</option>
+        <option>TastyToo</option>
+        <option>FireBird</option>
+        <option>Pyrolyse</option>
+        <option>Awoo</option>
+      </select>
+      <label htmlFor={id2} className="FormRowDisabled">
+        {label1+" "+label2}
+      </label>
+    </div>
+  );
 
-    const [email, setEmail] = useState("")
-    const [phone, setPhone] = useState("")
-    const [name, setName]   = useState("")
+function PaymentForm(props) {
+
+    const [riddim, setRiddim]   = useState("")
+    const [email, setEmail]     = useState("")
+    const [phone, setPhone]     = useState("")
+    const [name, setName]       = useState("")
 
     const [success, setSuccess] = useState(false)
 
@@ -82,7 +136,7 @@ function PaymentForm() {
             try {
                 const {id} = paymentMethod
                 const response = await axios.post("http://localhost:4000/payment", {
-                    amount: 50000,
+                    amount: props.pricing*100,
                     id
                 })
 
@@ -109,6 +163,24 @@ function PaymentForm() {
         <div className='pricing'>
         
         <form className="Form" onSubmit={handleSubmit}>
+
+            <fieldset className="FormGroup">
+
+                <Listing
+                    label="Riddim"
+                    id="riddim"
+                    label1="Pack"
+                    label2={props.packaging}
+                    id2="pack"
+                    type="select"
+                    placeholder="-----"
+                    required
+                    autoComplete="riddim"
+                    value={riddim}
+                    onChange={(event) => { setRiddim(event.target.value) }}
+                />
+
+            </fieldset>
 
             <fieldset className="FormGroup">
 
@@ -150,7 +222,7 @@ function PaymentForm() {
 
             </fieldset>
 
-            <button>Pay</button>
+            <button>Pay {props.pricing}€</button>
         </form>
         </div>
             :

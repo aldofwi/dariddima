@@ -28,6 +28,32 @@
     white-space: nowrap;
 }
 
+.FormRowDisabled {
+    width: 50%;
+    min-width: 30px;
+    padding: 10px 10% 3px;
+    color: burlywood;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.FormRowSelect {
+	margin: 0 0 2px 0px;
+	padding: 0;
+	border-style: none;
+	/* color: #87bbfd; */
+	color: #fff;
+    background-color: transparent;
+	will-change: opacity, transform;
+	border-radius: 4px;
+	outline: none;
+}
+
+.FormRowSelect::-webkit-input-placeholder {
+    color: #87bbfd;
+}
+
 input {
     width: 100%;
     padding: 11px 15px 11px 0;
