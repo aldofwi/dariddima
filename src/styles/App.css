@@ -28,7 +28,24 @@
     white-space: nowrap;
 }
 
-.FormRowDisabled {
+.FormRowLabelCheck {
+    width: 100%;
+    padding: 11px 1px 1px 1px;
+    color: #c4f0ff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.FormRowCheck {
+    width: 1%;
+	min-width: 70px;
+    padding: 1px 1px 3px;
+    color: #c4f0ff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.FormRowPacked {
     width: 50%;
     min-width: 30px;
     padding: 10px 10% 3px;
@@ -39,10 +56,10 @@
 }
 
 .FormRowSelect {
+	width: 40%;
 	margin: 0 0 2px 0px;
 	padding: 0;
 	border-style: none;
-	/* color: #87bbfd; */
 	color: #fff;
     background-color: transparent;
 	will-change: opacity, transform;
@@ -62,10 +79,10 @@ input {
     -webkit-animation: 1ms void-animation-out;
 }
 
-input, button {
+input {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: auto;
     outline: none;
     border-style: none;
 }
@@ -97,13 +114,13 @@ color: #87bbfd;
 	padding: 11px 15px 11px 0;
 }
 
-button {
+
+.payform {
 	display: block;
 	font-size: 16px;
 	width: 100%;
 	background-color: burlywood;
 	height: 50px;
-	/*box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6;*/
 	border-radius: 4px;
 	color: #fff;
 	font-weight: 600;
@@ -113,11 +130,13 @@ button {
 	border: none;
 }
 
-button:active {
+/*
+button:active .payform {
 	background-color: #d782d9;
 	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
 	transform: scale(0.99);
 }
+*/
 
 .App {
 	margin-left: 25%;
@@ -129,3 +148,50 @@ h1,
 h3 {
 	text-align: center;
 }
+
+
+/* --- Alert Style --- */
+
+
+.alert-success.new {
+	background: none;
+	border: none;
+	border-left: 4px solid green;
+	border-radius: 0;
+	background: #fff;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+  }
+  
+  .alert-success.new2 {
+	background: #f3f8f3;
+	border: none;
+	border-left: 4px solid #45D298;
+	border-radius: 0;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+  }
+  
+  .alert-success.new2.p-4 {
+	padding: 0.75rem 0.75rem !important;
+  }
+  
+  .alert-success.new2 .fa {
+	color: #45D298;
+	display:table-cell;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 40px;
+  }
+  
+  .alert-success .alert-body {
+	padding-left: 0.75rem;
+	display: table-cell;
+	color: rgba(0,0,0,0.5);
+  }
+  
+  .alert-success .alert-header {
+	font-weight: 700;
+	color: #45D298;
+	padding: 0;
+	margin: 0;
+  }
+  

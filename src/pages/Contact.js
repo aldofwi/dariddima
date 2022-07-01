@@ -13,7 +13,7 @@ function Contact() {
 
         <div className='title'>Follow DR</div>
 
-        <div class="contact-image">
+        <div className="contact-image">
             <img src={require("../images/joka.png")} alt="Joka" /> 
         </div>
 

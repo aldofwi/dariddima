@@ -14,7 +14,7 @@ function StripeContainer(props) {
 
     <Elements stripe={stripeTestPromise}>
 
-        <PaymentForm pricing={props.value} packaging={props.package} />
+        <PaymentForm setShowItem={props.setShowItem} setShowNotif={props.setShowNotif} pricing={props.value} packaging={props.package} />
     
     </Elements>
 
