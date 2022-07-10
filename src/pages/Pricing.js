@@ -3,8 +3,9 @@ import "../styles/App.css"
 
 import StripeContainer from '../components/StripeContainer';
 
-function Pricing() {
+function Pricing(props) {
 
+    const [showNotif,   setShowNotif]  = useState(false);
     const [showItem,    setShowItem]   = useState(false);
     const [price,       setPrice]      = useState(0);  
     const [pack,        setPack]       = useState("");  
@@ -20,14 +21,28 @@ function Pricing() {
                     <div className='title_pricing'>Pricing</div>
                 </div>
 
-        { showItem ? <StripeContainer value={price} package={pack} /> : 
-            
+        { showItem ? <StripeContainer value={price} package={pack} setShowItem={setShowItem} setShowNotif={setShowNotif} /> : 
+
         <div className='pricing'>
+
+            { showNotif ?
+
+            <div>
+                <div className="myAlert-top alert alert-success">
+                    <a href="/pricing" className="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success</strong><br></br>
+                    <strong>Well done!</strong> You successfully bought <strong>a sweet Riddim </strong>!
+                </div>
+            </div>
+
+            :
 
             <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
                 <p className="fs-5 text-muted">All songs including our production must be credited as "Produced by DaRiddima".</p>
                 <p className="fs-5 text-muted">Perfect for indie artists working on different type of projects.</p>
             </div>
+
+            }
 
             <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div className="col">
@@ -37,6 +52,7 @@ function Pricing() {
                     </div>
                     <div className="card-body">
                         <h1 className="card-title pricing-card-title">{process.env.REACT_APP_STANDARD_PRICE}<small className="text-muted fw-light"> €</small></h1>
+                        
                         <ul className="list-unstyled mt-3 mb-4">
                         <li>Untagged MP3</li>
                         <li>PDF Contract</li>

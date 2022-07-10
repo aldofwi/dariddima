@@ -20,21 +20,27 @@ const CARD_OPTIONS = {
             iconColor: "#ffc7ee",
             color: "#ffc7ee",
         }
-
     }
 }
 
-const Intel = ({
-    label1,
-    label2,
-    id,
-  }) => (
-    <div className="FormRow">
-      <label htmlFor={id} className="FormRowDisabled">
-        {label1+" "+label2}
+const Checkbox = ({
+  label,
+  checked,
+  onChange,
+}) => ( 
+  <div className="FormRow">
+    <label className="FormRowLabelCheck">
+      <input
+        className="FormRowCheck"
+        type="checkbox"
+        required
+        checked={checked}
+        onChange={onChange}
+      />
+        {label}
       </label>
-    </div>
-  );
+  </div>
+);
 
 const Field = ({
     label,
@@ -71,8 +77,6 @@ const Field = ({
     id2,
     type,
     placeholder,
-    required,
-    autoComplete,
     value,
     onChange,
   }) => (
@@ -85,21 +89,20 @@ const Field = ({
         id={id}
         type={type}
         placeholder={placeholder}
-        required={required}
-        autoComplete={autoComplete}
+        required
         value={value}
         onChange={onChange}
       >
-        <option hidden>Choose a product</option>
-        <option>Barrio</option>
-        <option>HardBrain</option>
-        <option>Nomad</option>
-        <option>TastyToo</option>
-        <option>FireBird</option>
-        <option>Pyrolyse</option>
-        <option>Awoo</option>
+        <option value="" hidden>Choose a product</option>
+        <option value="Barrio">Barrio</option>
+        <option value="HardBrain">HardBrain</option>
+        <option value="Nomad">Nomad</option>
+        <option value="TastyToo">TastyToo</option>
+        <option value="FireBird">FireBird</option>
+        <option value="Pyrolyse">Pyrolyse</option>
+        <option value="Awoo">Awoo</option>
       </select>
-      <label htmlFor={id2} className="FormRowDisabled">
+      <label htmlFor={id2} className="FormRowPacked">
         {label1+" "+label2}
       </label>
     </div>
@@ -112,7 +115,8 @@ function PaymentForm(props) {
     const [phone, setPhone]     = useState("")
     const [name, setName]       = useState("")
 
-    const [success, setSuccess] = useState(false)
+    const [checked, setChecked] = useState(false)
+    // const [success, setSuccess] = useState(false)
 
     const stripe = useStripe()
     const elements = useElements()
@@ -120,6 +124,8 @@ function PaymentForm(props) {
     const handleSubmit = async (e) => {
 
         e.preventDefault()
+
+        // console.log("\nChoosen Riddim : ", riddim)
 
         const {error, paymentMethod} = await stripe.createPaymentMethod({
             type: "card",
@@ -137,12 +143,14 @@ function PaymentForm(props) {
                 const {id} = paymentMethod
                 const response = await axios.post("http://localhost:4000/payment", {
                     amount: props.pricing*100,
+                    product: riddim,
+                    pack: props.packaging,
                     id
                 })
 
                 if(response.data.success) {
                     console.log("Successful Payment")
-                    setSuccess(true)
+                    // setSuccess(true)
                 }
 
             } catch (error) {
@@ -152,13 +160,15 @@ function PaymentForm(props) {
         } else {
             console.log(error.message)
         }
+
+        props.setShowItem(false)
+        props.setShowNotif(true)
+
     }
 
     return (
 
         <>
-        
-        {!success ?
 
         <div className='pricing'>
         
@@ -173,10 +183,6 @@ function PaymentForm(props) {
                     label2={props.packaging}
                     id2="pack"
                     type="select"
-                    placeholder="-----"
-                    required
-                    autoComplete="riddim"
-                    value={riddim}
                     onChange={(event) => { setRiddim(event.target.value) }}
                 />
 
@@ -220,16 +226,24 @@ function PaymentForm(props) {
                     <CardElement options={CARD_OPTIONS} />
                 </div>
 
-            </fieldset>
+              </fieldset>
 
-            <button>Pay {props.pricing}€</button>
-        </form>
+              <fieldset className="FormGroup">
+
+                <Checkbox
+                    id="checkbox"
+                    label={<label>I agree to <a href='/'>Terms & Conditions</a></label>}
+                    checked={checked}
+                    onChange={(event) => { setChecked(!checked) }}
+                />
+              
+              </fieldset>
+
+            <button className="payform">Pay {props.pricing}€</button>
+
+        </form> 
+
         </div>
-            :
-        <div className='pricing'>
-            <p className='mb-3'><h2>You just bought a sweet Riddim !</h2></p>
-        </div>
-        }
 
         </>
 
