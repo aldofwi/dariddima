@@ -10,6 +10,8 @@ function Pricing(props) {
     const [price,       setPrice]      = useState(0);  
     const [pack,        setPack]       = useState("");  
 
+    // console.log("showNotif = ", showNotif) // value can not passed
+
     return (
         <div>
 
@@ -28,7 +30,7 @@ function Pricing(props) {
             { showNotif ?
 
             <div>
-                <div className="myAlert-top alert alert-success">
+                <div className="myAlert-bottom alert alert-success">
                     <a href="/pricing" className="close" data-dismiss="alert" aria-label="close">&times;</a>
                     <strong>Success</strong><br></br>
                     <strong>Well done!</strong> You successfully bought <strong>a sweet Riddim </strong>!
