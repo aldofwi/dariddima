@@ -3,6 +3,15 @@ import "../styles/App.css"
 
 import StripeContainer from '../components/StripeContainer';
 
+function myAlertTop() {
+
+    document.getElementById("myAlert-top").style.display = 'block';
+    
+    setTimeout(function(){
+        document.getElementById("myAlert-top").style.display = 'none';
+    }, 5000);
+}
+
 function Pricing(props) {
 
     const [showNotif,   setShowNotif]  = useState(false);
@@ -10,9 +19,12 @@ function Pricing(props) {
     const [price,       setPrice]      = useState(0);  
     const [pack,        setPack]       = useState("");  
 
-    // console.log("showNotif = ", showNotif) // value can not passed
+    console.log("showNotif = ", showNotif) // value can not passed
+
+    if(showNotif) myAlertTop()
 
     return (
+        
         <div>
 
             <title>Pricing</title>
@@ -27,24 +39,20 @@ function Pricing(props) {
 
         <div className='pricing'>
 
-            { showNotif ?
-
-            <div>
-                <div className="myAlert-bottom alert alert-success">
-                    <a href="/pricing" className="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Success</strong><br></br>
-                    <strong>Well done!</strong> You successfully bought <strong>a sweet Riddim </strong>!
+            <div className="child1">
+                <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
+                    <p className="fs-5 text-muted">All songs including our production must be credited as "Produced by DaRiddima".</p>
+                    <p className="fs-5 text-muted">Perfect for indie artists working on different type of projects.</p>
                 </div>
             </div>
 
-            :
-
-            <div className="pricing-header p-3 pb-md-4 mx-auto text-center">
-                <p className="fs-5 text-muted">All songs including our production must be credited as "Produced by DaRiddima".</p>
-                <p className="fs-5 text-muted">Perfect for indie artists working on different type of projects.</p>
+            <div className="child1 child2">
+                <div className="myAlert-top alert alert-success" id="myAlert-top">
+                    <a href="/pricing" className="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success</strong><br></br>
+                    <strong>Well done!</strong> You successfully bought <strong>a sweet Riddim </strong>! Check your mailbox & Enjoy IT.
+                </div>
             </div>
-
-            }
 
             <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div className="col">
