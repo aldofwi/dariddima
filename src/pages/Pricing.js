@@ -3,25 +3,29 @@ import "../styles/App.css"
 
 import StripeContainer from '../components/StripeContainer';
 
-function myAlertTop() {
+function myAlertSuccess() {
 
     document.getElementById("myAlert-top").style.display = 'block';
     
-    setTimeout(function(){
-        document.getElementById("myAlert-top").style.display = 'none';
+    setTimeout( function(){ 
+        document.getElementById("myAlert-top").style.display = 'none'; 
     }, 5000);
 }
 
+
 function Pricing(props) {
 
-    const [showNotif,   setShowNotif]  = useState(false);
+    const [showNotif,   setShowNotif]  = useState("");
     const [showItem,    setShowItem]   = useState(false);
     const [price,       setPrice]      = useState(0);  
     const [pack,        setPack]       = useState("");  
 
     console.log("showNotif = ", showNotif) // value can not passed
 
-    if(showNotif) myAlertTop()
+    // if(showNotif) myAlertTop()
+
+    if(showNotif === "success") myAlertSuccess()
+    // else if (showNotif === "error") myAlertFailure()
 
     return (
         

@@ -108,12 +108,20 @@ const Field = ({
     </div>
   );
 
+function myAlertFailure() {
+
+  document.getElementById("myAlert-ko").style.display = 'block';
+  
+  setTimeout( function(){ document.getElementById("myAlert-ko").style.display = 'none'; }, 5000);
+}
+
 function PaymentForm(props) {
 
     const [riddim, setRiddim]   = useState("")
     const [email, setEmail]     = useState("")
     const [phone, setPhone]     = useState("")
     const [name, setName]       = useState("")
+    const [err, setErr]         = useState("")
 
     const [checked, setChecked] = useState(false)
     // const [success, setSuccess] = useState(false)
@@ -149,20 +157,24 @@ function PaymentForm(props) {
                 })
 
                 if(response.data.success) {
-                    console.log("Successful Payment")
-                    // setSuccess(true)
-                }
+                    console.log("Successful Payment")               
+                  }
 
             } catch (error) {
-                console.log("Error : ", error.response)
+                console.log("Catch Error : ", error.response)
             }
 
+            props.setShowItem(false)
+            props.setShowNotif("success") // Alert Success 
+
         } else {
-            console.log(error.message)
+            console.log("Else Error : ", error.message)
+            setErr(error.message)
+            myAlertFailure()
+            props.setShowItem(true)
+            // props.setShowNotif("error") // Alert Danger
         }
 
-        props.setShowItem(false)
-        props.setShowNotif(true)
 
     }
 
@@ -171,6 +183,15 @@ function PaymentForm(props) {
         <>
 
         <div className='pricing'>
+
+        <div className="child1 child2">
+          <div className="myAlert-ko alert alert-danger" id="myAlert-ko">
+              <a href="/pricing" className="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong>Failure</strong><br></br>
+              An error occured during the purchase process <strong>of the Riddim </strong>!<br></br> 
+              {err} Please, Try again.
+          </div>
+        </div>
         
         <form className="Form" onSubmit={handleSubmit}>
 
