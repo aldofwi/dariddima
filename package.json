@@ -1,4 +1,5 @@
 {
+  "homepage": "https://aldofwi.github.io/dariddima",
   "name": "dariddima",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +27,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d master -d build",
-    "start": "node ./server/index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
