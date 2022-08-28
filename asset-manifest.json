@@ -1,30 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.f050265e.css",
-    "main.js": "/static/js/main.c6748df7.js",
-    "static/media/firebird.mp3": "/static/media/firebird.be57da454886b3768a0c.mp3",
-    "static/media/awoo.mp3": "/static/media/awoo.21908e27485f5c98064f.mp3",
-    "static/media/nomad.mp3": "/static/media/nomad.1bc8007bf7b6b302b469.mp3",
-    "static/media/hardbrain.mp3": "/static/media/hardbrain.225ce37578b27b9e7936.mp3",
-    "static/media/tastytoo.mp3": "/static/media/tastytoo.f1bd8e7c945ca37500b1.mp3",
-    "static/media/pyrolyse.mp3": "/static/media/pyrolyse.5c700d4bb253bf704f2d.mp3",
-    "static/media/joka.png": "/static/media/joka.9ad4b681e680866afa90.png",
-    "static/media/bnh.png": "/static/media/bnh.e671e7534f4ad4dcf405.png",
-    "static/media/barrio.mp3": "/static/media/barrio.d569a01c33bb1cd33260.mp3",
-    "static/media/pic-3.png": "/static/media/pic-3.5a1b0417997eb6120d01.png",
-    "static/media/pic-1.png": "/static/media/pic-1.b3e826516b8145646bd0.png",
-    "static/media/right time and place.mp3": "/static/media/right time and place.0b27024ee2a600b0171d.mp3",
-    "static/media/pic-2.png": "/static/media/pic-2.140ee25b72802a0665d2.png",
-    "static/media/pic-4.png": "/static/media/pic-4.ff9d040b39f289952a5f.png",
-    "static/media/pic-5.png": "/static/media/pic-5.457cf9fb56d26ad01c9d.png",
-    "static/media/pic-6.png": "/static/media/pic-6.4133c742e5564ab9ba17.png",
-    "static/media/bubble.png": "/static/media/bubble.5abfb2f4adb1ea0a9089.png",
-    "index.html": "/index.html",
-    "main.f050265e.css.map": "/static/css/main.f050265e.css.map",
-    "main.c6748df7.js.map": "/static/js/main.c6748df7.js.map"
+    "main.css": "/dariddima/static/css/main.7a7dce33.css",
+    "main.js": "/dariddima/static/js/main.48a30942.js",
+    "static/media/nomad.mp3": "/dariddima/static/media/nomad.1bc8007bf7b6b302b469.mp3",
+    "static/media/hardbrain.mp3": "/dariddima/static/media/hardbrain.225ce37578b27b9e7936.mp3",
+    "static/media/joka.png": "/dariddima/static/media/joka.9ad4b681e680866afa90.png",
+    "static/media/bnh.png": "/dariddima/static/media/bnh.e671e7534f4ad4dcf405.png",
+    "static/media/barrio.mp3": "/dariddima/static/media/barrio.d569a01c33bb1cd33260.mp3",
+    "static/media/pic-3.png": "/dariddima/static/media/pic-3.5a1b0417997eb6120d01.png",
+    "static/media/pic-1.png": "/dariddima/static/media/pic-1.b3e826516b8145646bd0.png",
+    "static/media/right time and place.mp3": "/dariddima/static/media/right time and place.0b27024ee2a600b0171d.mp3",
+    "static/media/pic-2.png": "/dariddima/static/media/pic-2.140ee25b72802a0665d2.png",
+    "static/media/bubble.png": "/dariddima/static/media/bubble.5abfb2f4adb1ea0a9089.png",
+    "index.html": "/dariddima/index.html",
+    "main.7a7dce33.css.map": "/dariddima/static/css/main.7a7dce33.css.map",
+    "main.48a30942.js.map": "/dariddima/static/js/main.48a30942.js.map"
   },
   "entrypoints": [
-    "static/css/main.f050265e.css",
-    "static/js/main.c6748df7.js"
+    "static/css/main.7a7dce33.css",
+    "static/js/main.48a30942.js"
   ]
 }
