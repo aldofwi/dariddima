@@ -11,7 +11,7 @@ function Contact() {
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         </head>
 
-        <div className='title'>Follow DR</div>
+        <div className='title'>Follow Me</div>
 
         <div className="contact-image">
             <img src={require("../images/joka.png")} alt="Joka" /> 
