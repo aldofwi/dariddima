@@ -80,6 +80,8 @@
   .playlist img {
     position: fixed;
     top: -10vh;
+    left: 30vh;
+    height: 95%;
   }
   
   .selected {
